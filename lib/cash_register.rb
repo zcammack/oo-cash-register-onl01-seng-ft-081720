@@ -4,7 +4,7 @@ attr_accessor :total, :discount
 
 def initialize(discount=0)
   @total = 0
-  @discount = discount.to_f / 100
+  @discount = discount
 end
 
 def add_item(title, price, quantity=1)
@@ -12,7 +12,7 @@ def add_item(title, price, quantity=1)
 end
 
 def apply_discount
-  @total *= @discount
+  @total *= @discount.to_f / 100
 end
 
 end
