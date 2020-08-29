@@ -16,7 +16,7 @@ def add_item(title, price, quantity=1)
     @items << title
     counter += 1
   end
-  @last_item = price.to_f
+  @last_item = price * quantity
 end
 
 def apply_discount
