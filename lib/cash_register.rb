@@ -32,6 +32,6 @@ end
   end
 
   def void_last_transaction
-    self.total.to_f -= @last_item
+    self.total -= @last_item
   end
 end
