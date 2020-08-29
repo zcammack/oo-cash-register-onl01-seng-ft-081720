@@ -16,6 +16,7 @@ def add_item(title, price, quantity=1)
     @items << title
     counter += 1
   end
+  last_item = price
 end
 
 def apply_discount
@@ -31,6 +32,6 @@ end
   end
 
   def void_last_transaction
-    self.total =
+    self.total -= @last_item
   end
 end
