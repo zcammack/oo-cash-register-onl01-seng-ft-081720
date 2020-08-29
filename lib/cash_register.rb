@@ -13,6 +13,7 @@ end
 
 def apply_discount
   self.total = (total * ((100.0 - discount.to_f)/100))
+  "After discount, the total comes to $#{self.total}."
 end
 
 end
