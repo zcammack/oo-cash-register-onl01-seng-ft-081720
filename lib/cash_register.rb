@@ -6,6 +6,7 @@ def initialize(discount=0)
   @total = 0
   @discount = discount
   @items = []
+
 end
 
 def add_item(title, price, quantity=1)
@@ -15,7 +16,7 @@ def add_item(title, price, quantity=1)
     @items << title
     counter += 1
   end
-  @last_item = @total
+  @last_item = price.to_f
 end
 
 def apply_discount
@@ -31,6 +32,6 @@ end
   end
 
   def void_last_transaction
-    @total -= @last_item
+    self.total -= @last_item
   end
 end
